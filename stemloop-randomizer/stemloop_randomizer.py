@@ -20,12 +20,15 @@ for file in os.listdir(path):
 
         f.close()
 
+        if len(lines) < maxNum:
+            maxNum = len(lines)
+
         for i in range(maxNum):
             chars = []
             for j in range(len(lines)):
                 chars.append("")
                 for k in range(i+1):
-                    rand = random.randrange(0,len(lines),1)
+                    rand = random.randrange(0,len(lines[0])-1,1)
                     chars[j] = chars[j] + lines[j][rand]
                 chars[j] = chars[j] + "\n"
 
