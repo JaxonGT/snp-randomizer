@@ -8,6 +8,7 @@ for file in os.listdir(path):
     if file.endswith(".txt"):
 
         lines = []
+        edit = []
         headers = []
         chars = []
 
@@ -20,16 +21,22 @@ for file in os.listdir(path):
 
         f.close()
 
-        if len(lines) < maxNum:
-            maxNum = len(lines)
+        length = len(lines[0]) - 1
+
+        if length < maxNum:
+            maxNum = length
 
         for i in range(maxNum):
             chars = []
+            edit = lines.copy()
             for j in range(len(lines)):
                 chars.append("")
+                count = length
                 for k in range(i+1):
-                    rand = random.randrange(0,len(lines[0])-1,1)
-                    chars[j] = chars[j] + lines[j][rand]
+                    rand = random.randrange(0,count,1)
+                    chars[j] = chars[j] + edit[j][rand]
+                    edit[j] = edit[j][:rand] + edit[j][rand+1:]
+                    count = count - 1
                 chars[j] = chars[j] + "\n"
 
             f = open(file.replace(".txt", "_" + str(i+1) + ".txt"), "w")
