@@ -28,16 +28,18 @@ for file in os.listdir(path):
 
         for i in range(maxNum):
             chars = []
-            edit = lines.copy()
-            for j in range(len(lines)):
+            for n in range(len(lines)):
                 chars.append("")
-                count = length
-                for k in range(i+1):
-                    rand = random.randrange(0,count,1)
+
+            edit = lines.copy()
+            for k in range(i+1):
+                rand = random.randrange(0,len(edit[0])-1,1)
+                for j in range(len(lines)):
                     chars[j] = chars[j] + edit[j][rand]
                     edit[j] = edit[j][:rand] + edit[j][rand+1:]
-                    count = count - 1
-                chars[j] = chars[j] + "\n"
+
+            for n in range(len(chars)):
+                chars[n] = chars[n] + "\n"
 
             f = open(file.replace(".txt", "_" + str(i+1) + ".txt"), "w")
 
