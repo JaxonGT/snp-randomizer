@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "stemloop-randomizer", "stemloop-randomizer\stemloop-randomizer.pyproj", "{BD2A31B8-37DF-4E41-8D3A-89634F231716}"
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "snp-randomizer", "snp-randomizer\snp-randomizer.pyproj", "{BD2A31B8-37DF-4E41-8D3A-89634F231716}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,5 +16,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BC4246D3-FFF6-40B3-8848-398EB725584F}
 	EndGlobalSection
 EndGlobal
